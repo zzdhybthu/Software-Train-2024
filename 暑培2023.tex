@@ -1,0 +1,146 @@
+\documentclass{beamer}
+\usepackage{ctex, hyperref}
+\usepackage[T1]{fontenc}
+
+% other packages
+\usepackage{latexsym,amsmath,xcolor,multicol,booktabs,calligra}
+\usepackage{graphicx,pstricks,listings,stackengine}
+\usepackage{float}
+\usepackage{fontspec}
+
+\usepackage{tsinghua}
+% description: classic template for create a titlepage
+% defs
+\def\cmd#1{\texttt{\color{red}\footnotesize $\backslash$#1}}
+\def\env#1{\texttt{\color{blue}\footnotesize #1}}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+\definecolor{halfgray}{gray}{0.55}
+
+\lstset{
+	basicstyle=\ttfamily\small,
+	keywordstyle=\bfseries\color{deepblue},
+	emphstyle=\ttfamily\color{deepred},    % Custom highlighting style
+	stringstyle=\color{deepgreen},
+	numbers=left,
+	numberstyle=\small\color{halfgray},
+	rulesepcolor=\color{red!20!green!20!blue!20},
+	frame=shadowbox,
+}
+% Title page details: 
+\title{清华大学电子系科协软件部暑期培训}
+\subtitle{第零讲：MAP}
+\author{电子系科协软件部}
+\date{\today}
+
+
+\begin{document}
+	\titlepage
+	
+	\begin{frame}
+        \frametitle{目录}
+        \tableofcontents
+    \end{frame}
+
+    \section{暑培简介}
+
+    \begin{frame}
+        \frametitle{基本信息}
+        \begin{itemize}
+            \item 暑培对象：电子系科协软件部新部员、全校热爱软件开发的同学
+            \item 暑培时间：7.10--7.25，每晚19:20开始，持续 $2\sim3$ 小时
+            \item 培训内容：软件部接下来一年中的主要技术栈
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{暑培内容}
+        分为四大块：通用技术、赛事开发、网站建设、拓展讲座
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.9\linewidth]{yugu.png}
+        \end{figure}
+    \end{frame}
+
+    \section{通用技术}
+
+    \begin{frame}{开发的基础}
+        这一部分中，我们介绍一些软件开发的\textbf{基础知识}，无论是赛事开发、网站建设乃至未来的科研工作，都离不开这些基础技术的支持。
+        \begin{itemize}
+            \item \textbf{Day1: Linux基础}：什么是Linux？什么是命令行？什么是Shell？如何使用Linux？
+            \item \textbf{Day2：Git与GitHub}：如何使用Git进行版本管理与多人协作？GitHub 怎么用？
+            \item \textbf{Day13：Docker、CI与存储桶}：使用Docker容器与镜像方便开发，使用CI自动化测试与部署，使用存储桶存储数据
+            \item \textbf{Day14：Docker实战}：利用Docker部署Minecraft服务器
+        \end{itemize}
+    \end{frame}
+
+    \section{赛事开发}
+
+    \begin{frame}{底层逻辑：C\#}
+        这一部分中，我们介绍一种现代编程语言C\#。C\#是软件部赛事开发部分的\textbf{主要语言}，从赛事的底层逻辑到外部的游戏界面，都离不开C\#的支持。
+        \begin{itemize}
+            \item \textbf{Day3: C\#基础}：C\#与C/C++有什么不同？使用C\#有什么好处？C\#基础语法介绍
+            \item \textbf{Day4：多线程}：操作系统如何管理进程与线程？如何使用多线程？多线程有什么好处？多线程中会遇到什么问题？C\#多线程实战
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{通信与接口}
+        这一部分中，我们会先为大家介绍一些关于C++的更多知识，然后介绍Protobuf与gRPC。它们由Google开发，是一种高效的通信协议与通信方式，也是软件部赛事开发部分的\textbf{核心通信技术}。
+        \begin{itemize}
+            \item \textbf{Day5: C++进阶}：我们的代码是如何变为可执行程序的？现代的C++有哪些更为高级的特性？C++进阶介绍
+            \item \textbf{Day6：通信基础}：HTTP与TCP/IP协议简介、利用Protobuf和gRPC实现通信、gRPC实战
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{从命令行到图形界面}
+        这一部分中，我们基于C\#，分别介绍WPF/MAUI与Unity/WebGL，它们是软件部赛事开发部分的\textbf{主要界面技术}。
+        \begin{itemize}
+            \item \textbf{Day7: WPF/MAUI简介}：使用C\#作为编程语言，利用.NET开发桌面应用程序，WPF/MAUI简介，MVVM思想介绍
+            \item \textbf{Day:9：Unity/WebGL简介}：利用Unity制作游戏动画，利用WebGL实现网页上的观看，Unity实战
+        \end{itemize}
+    \end{frame}
+
+    \section{网站建设}
+
+    \begin{frame}{前端基础}
+        这一部分中，我们会介绍软件部网站建设中使用的一些基础前端技术，它们也是\textbf{科协网站(eesast.com)}中现在正在使用的前端技术。
+        \begin{itemize}
+            \item \textbf{Day8：HTML、CSS、JS}：HTML、CSS、JS是什么？它们在网站开发中起到什么作用？网站开发基础教学
+            \item \textbf{Day10：Node.js、NPM、TS、WebPack}：利用更为复杂的技术进行网站开发、包管理等操作，网站开发进阶教学
+            \item \textbf{Day11：React、GraphQL、Hasura}：利用现有的React框架，提高网站开发效率，同时使用Hasura进行数据库管理
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{后端基础}
+        这一部分中，我们会介绍软件部网站建设中使用的一些基础后端技术。为了保持技术栈的一致，我们介绍的后端尽可能采取与前端接近的技术栈。
+        \begin{itemize}
+            \item \textbf{Day10：Node.js、NPM、TS、WebPack}：使用 TS 等语言进行后端的开发，使用 WebPack 将程序打包到服务器上
+            \item \textbf{Day12：Express、MongoDB、COS、CDN、Web服务器}：利用简单的Express框架实现web功能、利用MongoDB存放数据，利用COS、CDN等作为云硬盘存储、并介绍Web服务器了解网站部署
+        \end{itemize}
+    \end{frame}
+
+    \section{拓展讲座}
+
+    \begin{frame}{Minecraft红石电路设计}
+        \textbf{Day14：Minecraft红石电路设计}：本讲中，我们邀请到了刘雪枫学长，为大家介绍Minecraft中的红石电路设计。同时，我们将在暑假期间举办红石电路设计大赛，以便大家将\textbf{数字逻辑与处理器基础}课程中所学知识学以致用。
+    \end{frame}
+
+    \begin{frame}{近现代计算机图形学}
+        \textbf{Day15\&16：近现代计算机图形学}：本讲中，我们邀请到了黄天予同学，为大家介绍近现代计算机中的图形学知识。我们将从\textbf{电磁场与波}和\textbf{信号与系统}的角度来理解图形学技术，并运用\textbf{数字逻辑与处理器基础}中学到的流水线技术来理解渲染工作，带大家领略图形学之美。
+    \end{frame}
+
+    \section{作业与奖品}
+
+    \begin{frame}{作业与奖品}
+        \begin{itemize}
+            \item \textbf{作业}：每天的课程结束后，我们会布置一些作业，巩固知识，欢迎大家按照讲师的要求提交作业。作业不强制要求完成。
+            \item \textbf{奖品}：我们会统计各位同学的作业完成情况，对于完成情况较好的同学，会在下学期初为大家发放奖品。
+        \end{itemize}
+    \end{frame}
+	
+	\begin{frame}{}
+	    \centering \Huge{\heiti 谢谢大家！}
+	\end{frame}
+	
+\end{document}  
