@@ -51,10 +51,22 @@ Nginx 及其模块的工作方式由配置文件决定。默认情况下，配�
 
 ### 启动、停止和重新加载配置
 
-要启动 Nginx，只需运行它的可执行文件。启动后，可以通过带 `-s` 参数的可执行文件来控制它。使用以下语法：
+查看版本、配置选项等：
+
+```nginx
+nginx -V
+```
+
+要启动 Nginx，只需运行它的可执行文件：
+
+```nginx
+nginx
+```
+
+启动后，可以通过带 `-s` 参数的可执行文件来控制它。使用以下语法：
 
 ```bash
-nginx -s signal
+nginx -s <signal>
 ```
 
 其中 signal 可以是以下之一：stop — 快速关闭
@@ -302,7 +314,7 @@ location ~ \.php {
 
 <script>
   function change1() {
-    fetch("http://localhost/api/route1/", { method: "GET" })
+    fetch("http://localhost/api/helloworld/", { method: "GET" })
       .then((data) => {
         return data.text();
       })
@@ -313,7 +325,7 @@ location ~ \.php {
       .catch((error) => console.error("error:", error));
   }
   function change2() {
-    fetch("http://localhost/api/route2/", { method: "GET" })
+    fetch("http://localhost/api/", { method: "GET" })
       .then((data) => {
         return data.text();
       })

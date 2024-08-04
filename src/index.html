@@ -1,0 +1,31 @@
+<h1>Hello!</h1>
+
+<p id="text">nothing here</p>
+
+<button onclick="change1()">helloworld</button>
+<button onclick="change2()">helloworld!</button>
+
+<script>
+  function change1() {
+    fetch("http://localhost/api/", { method: "GET" })
+      .then((data) => {
+        return data.text();
+      })
+      .then((text) => {
+        console.log(text);
+        document.getElementById("text").innerHTML = text;
+      })
+      .catch((error) => console.error("error:", error));
+  }
+  function change2() {
+    fetch("http://localhost:3000/", { method: "GET" })
+      .then((data) => {
+        return data.text()
+      })
+      .then((text) => {
+        console.log(text);
+        document.getElementById("text").innerHTML = text + "!";
+      })
+      .catch((error) => console.error("error:", error));
+  }
+</script>
