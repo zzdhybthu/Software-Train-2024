@@ -146,7 +146,7 @@ http {
 location [ = | ~ | ~* | ^~ ] uri { ... }
 ```
 
-`location` 后面第一个参数是可选的。其中，`=` 是精确匹配， `^` 是正则匹配，区分大小写， `^*` 是正则匹配，不区分大小写， `^~ `是前缀匹配。
+`location` 后面第一个参数是可选的。其中，`=` 是精确匹配， `~` 是正则匹配，区分大小写， `~*` 是正则匹配，不区分大小写， `^~ `是前缀匹配。
 
 以上述 `server` 块为例，对于以 `.mp3` 结尾的请求，服务器将以 `/media` 为根目录发送文件。例如，对于 `http://localhost/eesast/example.mp3` 请求，Nginx 将发送 `/media/eesast/example.mp3` 文件。如果该文件不存在，Nginx 将发送一个 404 错误响应。以 `/images/ `开头的请求，服务器将从 `/data/images` 目录发送文件。例如，对于 `http://localhost/images/example.png` 请求，Nginx 将发送 `/data/images/example.png` 文件。若 `/images/` 与 `\.(mp3|mp4)` 均不匹配，则匹配 `/` ，请求将映射到 `/data` 目录。特别地，若 `/images/` 与 `\.(mp3|mp4)` 均匹配，则优先匹配`\.(mp3|mp4)` 。
 
@@ -530,3 +530,9 @@ http {
 你可以发送邮件到 c-zy22@mails.tsinghua.edu.cn，主题为2024暑培-姓名-班级，附件包含一个且仅有一个压缩文件（zip/7z），包含项目的全部源码（不过请不要放 **node_modules** 进来）以及说明文件（如何启动项目，以及介绍两句这个项目有什么功能，随便写写即可）。
 
 祝大家暑假愉快！
+
+
+
+## 附
+
+演示文件地址：https://github.com/zzdhybthu/Software-Train-2024
